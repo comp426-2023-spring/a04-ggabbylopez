@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "api endpoints for RPS and RPSLS",
   "main": "server.js",
+  "type": "module",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "node server.js --port=5555"
+    "test": "node server.js --port=5555",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
