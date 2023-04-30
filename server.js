@@ -26,7 +26,7 @@ const server = app.listen(HTTP_PORT, () => {
 app.get("/app/", (req,res,next) => {
     res.json({"message": "200 OK"});
     res.status(200);
-})
+});
 
 app.get("/app/rps", (req,res,next) => {
     res.json(rps());
@@ -72,4 +72,4 @@ app.get("/app/rpsls/play:shot", (req,res,next) => {
 app.use(function(req,res){
     res.json({"message": "404 NOT FOUND"});
     res.status(404);
-})
+});
