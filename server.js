@@ -7,7 +7,7 @@ import {rps, rpsls} from './lib/rpsls.js';
 
 var argv = minimist(process.argv.slice(2));
 
-var HTTP_PORT;
+var HTTP_PORT = 0;
 if(argv['port'] != undefined){
     HTTP_PORT = argv['port']
 } else {
@@ -58,12 +58,12 @@ app.post("/app/rpsls/play", (req,res,next) => {
     res.status(200);
 });
 
-app.get("/app/rps/play:shot", (req,res,next) => {
+app.get("/app/rps/play/:shot", (req,res,next) => {
     res.json(rps(req.params['shot']));
     res.status(200);
 });
 
-app.get("/app/rpsls/play:shot", (req,res,next) => {
+app.get("/app/rpsls/play/:shot", (req,res,next) => {
     res.json(rpsls(req.params.shot));
     res.status(200);
 });
