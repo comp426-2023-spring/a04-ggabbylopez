@@ -1,4 +1,3 @@
-import res from "express/lib/response";
 
 export function rps(move){
     const gameRules = {
