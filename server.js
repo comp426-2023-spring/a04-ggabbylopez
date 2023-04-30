@@ -64,7 +64,7 @@ app.get("/app/rps/play:shot", (req,res,next) => {
 });
 
 app.get("/app/rpsls/play:shot", (req,res,next) => {
-    res.json(rpsls(req.params['shot']));
+    res.json(rpsls(req.params.shot));
     res.status(200);
 });
 
